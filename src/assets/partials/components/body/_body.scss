@@ -1,0 +1,19 @@
+@import "../../shared/reset/_reset.scss";
+@import "../theme-toggler/first/_first.scss";
+@import "../theme-toggler/second/_second.scss";
+@import "../theme-toggler/third/_third.scss";
+
+@mixin body {
+  @include reset;
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    @include first;
+    @include second;
+    @include third;
+  }
+}

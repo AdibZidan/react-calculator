@@ -1,0 +1,23 @@
+$first-main-background: hsl(222, 26%, 31%);
+$first-key-background: hsl(30, 25%, 89%);
+$first-toggle-background: hsl(223, 31%, 20%);
+$first-keypad-background: hsl(223, 31%, 20%);
+$first-toggle-key-background: hsl(6, 63%, 50%);
+
+@mixin first {
+  &.first {
+    background-color: $first-main-background;
+    color: $first-key-background;
+
+    div {
+      &.button-container {
+        background-color: $first-toggle-background;
+
+        button {
+          background-color: $first-toggle-key-background;
+          left: 5%;
+        }
+      }
+    }
+  }
+}

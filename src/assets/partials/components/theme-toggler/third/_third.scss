@@ -1,0 +1,23 @@
+$third-main-background: hsl(268, 75%, 9%);
+$third-key-background: hsl(52, 100%, 62%);
+$third-toggle-background: hsl(198, 20%, 13%);
+$third-keypad-background: hsl(0, 5%, 81%);
+$third-toggle-key-background: hsl(176, 100%, 44%);
+
+@mixin third {
+  &.third {
+    background-color: $third-main-background;
+    color: $third-key-background;
+
+    div {
+      &.button-container {
+        background-color: $third-toggle-background;
+
+        button {
+          background-color: $third-toggle-key-background;
+          left: 68%;
+        }
+      }
+    }
+  }
+}

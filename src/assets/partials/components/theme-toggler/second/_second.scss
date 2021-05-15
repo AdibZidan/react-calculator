@@ -1,0 +1,23 @@
+$second-main-background: hsl(0, 0%, 90%);
+$second-key-background: hsl(60, 10%, 19%);
+$second-toggle-background: hsl(0, 5%, 81%);
+$second-keypad-background: hsl(0, 5%, 81%);
+$second-toggle-key-background: hsl(25, 98%, 40%);
+
+@mixin second {
+  &.second {
+    background-color: $second-main-background;
+    color: $second-key-background;
+
+    div {
+      &.button-container {
+        background-color: $second-toggle-background;
+
+        button {
+          background-color: $second-toggle-key-background;
+          left: 33%;
+        }
+      }
+    }
+  }
+}
