@@ -1,0 +1,18 @@
+section {
+  &.screen {
+    display: flex;
+    justify-content: flex-end;
+    width: 45vw;
+    height: 125px;
+    margin-top: 25px;
+    border-radius: 16px;
+
+    span {
+      &.result {
+        display: inline-block;
+        margin-right: 25px;
+        font-size: 3rem;
+      }
+    }
+  }
+}

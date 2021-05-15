@@ -3,6 +3,12 @@ $second-key-background: hsl(60, 10%, 19%);
 $second-toggle-background: hsl(0, 5%, 81%);
 $second-keypad-background: hsl(0, 5%, 81%);
 $second-toggle-key-background: hsl(25, 98%, 40%);
+$second-screen-background: hsl(0, 0%, 93%);
+$second-number-background: hsl(45, 7%, 89%);
+$second-key-special-background: hsl(185, 42%, 37%);
+$second-key-special-color: hsl(0, 0, 100%);
+$second-box-shadow: hsl(35, 11%, 61%);
+$second-special-box-shadow: hsl(185, 58%, 25%);
 
 @mixin second {
   &.second {
@@ -16,6 +22,58 @@ $second-toggle-key-background: hsl(25, 98%, 40%);
         button {
           background-color: $second-toggle-key-background;
           left: 33%;
+        }
+      }
+
+      &.last {
+        background-color: $second-keypad-background;
+
+        button {
+          &.reset {
+            color: $second-key-special-color;
+            background-color: $second-key-special-background;
+            box-shadow: 0px 5px 0px $second-special-box-shadow;
+
+            &:active {
+              box-shadow: 0px 2px 0px $second-box-shadow;
+            }
+          }
+
+          &.equals {
+            background-color: $second-toggle-key-background;
+            color: $second-key-special-color;
+            box-shadow: 0px 5px 0px hsl(25, 99%, 27%);
+
+            &:active {
+              box-shadow: 0px 2px 0px $second-box-shadow;
+            }
+          }
+        }
+      }
+    }
+
+    section {
+      &.screen {
+        background-color: $second-screen-background;
+      }
+
+      &.numbers {
+        background-color: $second-keypad-background;
+
+        button {
+          background-color: $second-number-background;
+          color: $second-key-background;
+          box-shadow: 0px 5px 0px hsl(35, 11%, 61%);
+
+          &.del {
+            background-color: $second-key-special-background;
+            box-shadow: 0px 5px 0px $second-special-box-shadow;
+            color: $second-key-special-color;
+          }
+
+          &:active {
+            box-shadow: 0px 2px 0px $second-box-shadow;
+          }
         }
       }
     }

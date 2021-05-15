@@ -1,0 +1,55 @@
+section {
+  &.numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    width: 45vw;
+    margin-top: 20px;
+    padding: 20px;
+    border-top-left-radius: 16px;
+    border-start-end-radius: 16px;
+
+    button {
+      &.number {
+        padding: 10px;
+        font-size: 32px;
+        border-radius: 8px;
+        border: none;
+      }
+
+      &.del {
+        padding: 18px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+div {
+  &.last {
+    display: flex;
+    justify-content: space-around;
+    width: 45vw;
+    padding-bottom: 20px;
+    border-end-end-radius: 16px;
+    border-end-start-radius: 16px;
+
+    button {
+      padding: 10px;
+      font-size: 32px;
+      width: 43%;
+      border-radius: 8px;
+      border: none;
+
+      &.reset {
+        text-transform: uppercase;
+        padding: 18px;
+        font-size: 20px;
+      }
+
+      &.equals {
+        font-size: 26px;
+      }
+    }
+  }
+}

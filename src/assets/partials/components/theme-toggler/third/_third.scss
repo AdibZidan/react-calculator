@@ -1,8 +1,14 @@
 $third-main-background: hsl(268, 75%, 9%);
 $third-key-background: hsl(52, 100%, 62%);
 $third-toggle-background: hsl(198, 20%, 13%);
-$third-keypad-background: hsl(0, 5%, 81%);
+$third-keypad-background: hsl(268, 71%, 12%);
 $third-toggle-key-background: hsl(176, 100%, 44%);
+$third-screen-background: hsl(268, 71%, 12%);
+$third-number-background: hsl(268, 47%, 21%);
+$third-key-special-background: hsl(281, 89%, 26%);
+$third-key-special-color: hsl(0, 0, 100%);
+$third-box-shadow: hsl(290, 70%, 36%);
+$third-special-box-shadow: #871c9c;
 
 @mixin third {
   &.third {
@@ -16,6 +22,56 @@ $third-toggle-key-background: hsl(176, 100%, 44%);
         button {
           background-color: $third-toggle-key-background;
           left: 68%;
+        }
+      }
+
+      &.last {
+        background-color: $third-keypad-background;
+
+        button {
+          &.reset {
+            color: $third-key-special-color;
+            background-color: $third-key-special-background;
+            box-shadow: 0px 5px 0px $third-special-box-shadow;
+
+            &:active {
+              box-shadow: 0px 2px 0px $third-box-shadow;
+            }
+          }
+
+          &.equals {
+            background-color: $third-toggle-key-background;
+            box-shadow: 0px 5px 0px hsl(177, 92%, 70%);
+
+            &:active {
+              box-shadow: 0px 2px 0px $third-box-shadow;
+            }
+          }
+        }
+      }
+    }
+
+    section {
+      &.screen {
+        background-color: $third-screen-background;
+      }
+
+      &.numbers {
+        background-color: $third-keypad-background;
+
+        button {
+          background-color: $third-number-background;
+          color: $third-key-background;
+          box-shadow: 0px 5px 0px $third-special-box-shadow;
+
+          &.del {
+            background-color: $third-key-special-background;
+            color: $third-key-special-color;
+          }
+
+          &:active {
+            box-shadow: 0px 2px 0px $third-box-shadow;
+          }
         }
       }
     }

@@ -15,5 +15,15 @@
     @include first;
     @include second;
     @include third;
+
+    button {
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:active:not(.first):not(.second):not(.third) {
+        transform: translateY(5px);
+      }
+    }
   }
 }
